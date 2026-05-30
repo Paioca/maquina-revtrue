@@ -1,0 +1,19 @@
+node_modules
+dist
+dist-tsbuildinfo
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.log
+.env
+.env.local
+.env.*.local
+tsconfig.tsbuildinfo
+.vercel
+
+# Audit working files (regenerable via audit-*.mjs scripts)
+/audit/
+/audit-*.mjs
+.astro
