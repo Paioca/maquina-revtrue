@@ -16,7 +16,7 @@ const stack = [
   },
   {
     item: "Diagnóstico honesto da sua operação",
-    detalhe: "Onde a venda trava, o que o número está dizendo, e o que você pode mudar essa semana — não no próximo trimestre.",
+    detalhe: "Onde a venda trava, o que o número está dizendo, e o que você pode mudar essa semana.",
   },
   {
     item: "Prioridade clara do que resolver primeiro",
@@ -191,17 +191,6 @@ export function EmpresaOferta() {
                 >
                   Quero falar direto com o Felipe <Icon name="arrow-right" size="md" />
                 </button>
-                <p
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: 12,
-                    color: "rgba(255,255,255,.45)",
-                    margin: 0,
-                    letterSpacing: ".03em",
-                  }}
-                >
-                  5 min pra preencher · 45 min de conversa real · sem pitch no final
-                </p>
               </div>
             </div>
           </div>

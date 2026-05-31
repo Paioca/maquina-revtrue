@@ -12,7 +12,7 @@ const fases = [
     n: "01",
     titulo: "Diagnóstico",
     subtitulo: "Onde o dinheiro está escapando",
-    desc: "Olhamos pra onde a conversão está vazando: oferta, posicionamento, jornada do cliente, mix de produto, comunicação. Não opinião — mapa baseado em número e no que o cliente real está dizendo.",
+    desc: "Olhamos pra onde a conversão está vazando: oferta, posicionamento, jornada do cliente, mix de produto, comunicação. O diagnóstico é baseado em número e no que o cliente real está dizendo.",
     entrega: "Documento escrito com o diagnóstico completo e as prioridades na ordem certa.",
     destaque: false,
   },
@@ -28,7 +28,7 @@ const fases = [
     n: "03",
     titulo: "Operação",
     subtitulo: "Fazer funcionar de verdade",
-    desc: "Trabalhamos dentro da operação até a estrutura estar rodando. Não entregamos um documento e sumimos. Ficamos até o resultado aparecer nos números — conversão, ticket médio, previsibilidade.",
+    desc: "Trabalhamos dentro da operação até a estrutura estar rodando. Não entregamos um documento e sumimos. Ficamos até o resultado aparecer nos números: conversão, ticket médio, previsibilidade.",
     entrega: "Uma máquina de receita que funciona independente de improviso ou de quem está na cadeira.",
     destaque: false,
   },
@@ -207,7 +207,7 @@ export function EmpresaOQueFazemos() {
         >
           <span aria-hidden="true" style={{ color: orange, fontSize: 20, flexShrink: 0 }}>↗</span>
           <p style={{ fontSize: 16, lineHeight: 1.55, color: "rgba(255,255,255,.7)", margin: 0 }}>
-            Você não precisa contratar as três fases de uma vez. Muitos clientes começam pelo Diagnóstico — e a partir do mapa, decidem como e quando avançar. Sem amarra. Sem contrato de longo prazo imposto.
+            Você não precisa contratar as três fases de uma vez. Muitos clientes começam pelo Diagnóstico. A partir do mapa, decidem como e quando avançar. Sem amarra. Sem contrato de longo prazo imposto.
           </p>
         </div>
       </div>

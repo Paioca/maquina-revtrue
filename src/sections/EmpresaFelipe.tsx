@@ -114,7 +114,7 @@ export function EmpresaFelipe() {
             </p>
 
             <p style={{ fontSize: 20, lineHeight: 1.65, color: "rgba(255,255,255,.88)", margin: 0 }}>
-              Quando você está dentro de uma operação, é difícil enxergar onde ela trava. Você está resolvendo problema de produto, de entrega, de time, de caixa — a venda fica em segundo plano até virar urgência.
+              Quando você está dentro de uma operação, é difícil enxergar onde ela trava. Você está resolvendo problema de produto, de entrega, de time, de caixa. A venda fica em segundo plano até virar urgência.
             </p>
             <p style={{ fontSize: 20, lineHeight: 1.65, color: "rgba(255,255,255,.88)", margin: "24px 0 0" }}>
               Eu entro de fora. Com o olho de quem montou e operou processos comerciais em empresas que transformaram vendas em sistema — da prospecção ao forecast, do primeiro contato à renovação.
@@ -144,7 +144,7 @@ export function EmpresaFelipe() {
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 14 }}>
                 {[
                   "A visão de como uma operação de receita é projetada de verdade",
-                  "O mapa de onde sua venda trava — baseado em número, não em opinião",
+                  "O mapa de onde sua venda trava, baseado em número",
                   "O que mudar primeiro, na ordem que gera resultado mais rápido",
                   "Um processo que o seu time executa sem depender de mim pra andar",
                 ].map((item, i) => (

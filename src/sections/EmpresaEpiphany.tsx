@@ -36,7 +36,7 @@ export function EmpresaEpiphany() {
             </p>
 
             <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: 0 }}>
-              Nas operações comerciais da Oracle e da RD Station, aprendi como as melhores empresas do mundo montam a máquina de receita. Oferta, jornada, processo, time, dados — tudo projetado pra funcionar junto.
+              Nas operações comerciais da Oracle e da RD Station, aprendi como as melhores empresas do mundo montam a máquina de receita: oferta, jornada, processo, time, dados. Tudo projetado pra funcionar junto.
             </p>
             <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: "24px 0 0" }}>
               Quando comecei a trabalhar com empresas menores, vi um padrão que se repete independente do setor, do tamanho ou do produto:
@@ -62,12 +62,12 @@ export function EmpresaEpiphany() {
                   margin: 0,
                 }}
               >
-                Empreendedores que não crescem raramente têm problema de produto. Têm problema de estrutura comercial — e ninguém nunca sentou com eles pra montar isso direito.
+                Empreendedores que não crescem raramente têm problema de produto. Têm problema de estrutura comercial. Ninguém nunca sentou com eles pra montar isso direito.
               </p>
             </div>
 
             <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: 0 }}>
-              A operação comercial — oferta, posicionamento, jornada, processo, comunicação — cresceu no improviso, no feeling, na tentativa e erro. Ninguém projetou. Ninguém montou.
+              A operação comercial cresceu no improviso, no feeling, na tentativa e erro. Oferta, posicionamento, jornada, processo, comunicação. Ninguém projetou. Ninguém montou.
             </p>
             <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: "24px 0 0" }}>
               E improviso tem teto. Estrutura, não.
@@ -135,7 +135,7 @@ export function EmpresaEpiphany() {
               </p>
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 14 }}>
                 {[
-                  "Venda previsível — você sabe o que esperar",
+                  "Venda previsível. Você sabe o que esperar.",
                   "Conversão sobe com o mesmo volume de lead",
                   "Time executa sem depender de improviso",
                   "Você sabe onde intervir quando o número cai",

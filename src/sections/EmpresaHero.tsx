@@ -91,7 +91,7 @@ export function EmpresaHero() {
               maxWidth: 660,
             }}
           >
-            Você trabalha, investe, tenta. Mas o resultado não acompanha o esforço. Em algum ponto da sua operação comercial tem um furo — e enquanto você não souber onde, vai continuar remando com balde cheio.
+            Você trabalha, investe, tenta. O resultado não acompanha. Em algum ponto da operação comercial tem um gargalo. Enquanto não souber onde, o crescimento não vem.
           </p>
 
           <div style={{ marginTop: 44, display: "flex", flexDirection: "column", gap: 14, alignItems: "flex-start" }}>
@@ -115,17 +115,6 @@ export function EmpresaHero() {
             >
               Quero entender onde minha venda trava <Icon name="arrow-right" size="md" />
             </button>
-            <p
-              style={{
-                fontFamily: "var(--font-mono)",
-                fontSize: 12,
-                color: "rgba(255,255,255,.45)",
-                margin: 0,
-                letterSpacing: ".04em",
-              }}
-            >
-              5 min pra preencher · 45 min de conversa direta · sem proposta no final
-            </p>
           </div>
         </div>
       </section>

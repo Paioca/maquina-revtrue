@@ -6,14 +6,14 @@ const orange = "#D45A2A";
 
 const sintomas = [
   "Gera lead, faz reunião, manda proposta. Fica no aguardo.",
-  "Faturamento parado há meses — mesmo com mais movimento.",
+  "Faturamento parado há meses, mesmo com mais movimento.",
   "Perde pra concorrente por preço porque não souber justificar o valor.",
   "Equipe cresceu, resultado não acompanhou.",
   "Tem produto bom mas não sabe como apresentar pra fechar.",
-  "Cada venda é uma negociação do zero — não tem padrão.",
+  "Cada venda é uma negociação do zero. Sem padrão, sem critério.",
   "Vende, mas não sobra. Ticket baixo, margem espremida.",
   "Cliente some depois da proposta e você não sabe por quê.",
-  "Depende de você pra vender — sem você, a operação trava.",
+  "Depende de você pra vender. Sem você, a operação trava.",
   "Tentou CRM, contratou vendedor, fez curso. Voltou ao mesmo ponto.",
 ];
 
