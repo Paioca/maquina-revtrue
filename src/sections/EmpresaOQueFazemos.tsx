@@ -3,7 +3,6 @@
  * StoryBrand: o plano de 3 passos que reduz fricção
  * $100M Offers: dream outcome ao final de cada fase */
 
-const navy = "#14181F";
 const navySoft = "#1E232C";
 const orange = "#D45A2A";
 
@@ -45,7 +44,7 @@ export function EmpresaOQueFazemos() {
         borderTop: "1px solid rgba(255,255,255,.06)",
       }}
     >
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
+      <div className="lp-container" style={{ maxWidth: 1240, margin: "0 auto" }}>
         <div style={{ marginBottom: 64 }}>
           <p
             style={{

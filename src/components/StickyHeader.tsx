@@ -1,9 +1,13 @@
 /* Header sticky (navy with blur) */
+import { useState } from "react";
 import { Logo, Icon } from "../ui";
+import { BookingModal } from "./BookingModal";
 
 const orange = "#D45A2A";
 
 export function StickyHeader() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header
       style={{
@@ -63,8 +67,9 @@ export function StickyHeader() {
           >
             Sobre
           </a>
-          <a
-            href="/#processo"
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
             className="rev-header-cta"
             style={{
               background: orange,
@@ -82,13 +87,14 @@ export function StickyHeader() {
               gap: 8,
               whiteSpace: "nowrap",
               flexShrink: 0,
-              textDecoration: "none",
             }}
           >
-            Agendar uma sessão <Icon name="arrow-right" size="xs" />
-          </a>
+            Agendar sessão <Icon name="arrow-right" size="xs" />
+          </button>
         </div>
       </div>
+
+      <BookingModal open={open} onOpenChange={setOpen} />
       <style>{`
         @media (max-width: 640px) {
           .rev-header-row { padding: 14px 16px !important; gap: 10px !important; }

@@ -5,6 +5,7 @@ import { EmpresaFelipe } from "../../src/sections/EmpresaFelipe";
 import { EmpresaOQueFazemos } from "../../src/sections/EmpresaOQueFazemos";
 import { EmpresaOferta } from "../../src/sections/EmpresaOferta";
 import { EmpresaFechamento } from "../../src/sections/EmpresaFechamento";
+import { StickyMobileCTA } from "../../src/components/StickyMobileCTA";
 
 export default function Page() {
   return (
@@ -23,6 +24,9 @@ export default function Page() {
       <EmpresaOferta />
       {/* 7. Stakes + CTA Final */}
       <EmpresaFechamento />
+
+      {/* CTA fixo no rodapé · só mobile */}
+      <StickyMobileCTA />
     </main>
   );
 }

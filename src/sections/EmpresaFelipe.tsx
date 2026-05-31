@@ -19,7 +19,7 @@ export function EmpresaFelipe() {
         borderTop: "1px solid rgba(255,255,255,.06)",
       }}
     >
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
+      <div className="lp-container" style={{ maxWidth: 1240, margin: "0 auto" }}>
         <div className="felipe-grid" style={{ display: "grid", gridTemplateColumns: "400px 1fr", gap: "0 80px", alignItems: "start" }}>
 
           {/* Coluna esquerda: foto + identidade */}
@@ -117,7 +117,7 @@ export function EmpresaFelipe() {
               Quando você está dentro de uma operação, é difícil enxergar onde ela trava. Você está resolvendo problema de produto, de entrega, de time, de caixa. A venda fica em segundo plano até virar urgência.
             </p>
             <p style={{ fontSize: 20, lineHeight: 1.65, color: "rgba(255,255,255,.88)", margin: "24px 0 0" }}>
-              Eu entro de fora. Com o olho de quem montou e operou processos comerciais em empresas que transformaram vendas em sistema — da prospecção ao forecast, do primeiro contato à renovação.
+              Eu entro de fora. Com o olho de quem montou e operou processos comerciais em empresas que transformaram vendas em sistema, da prospecção ao forecast, do primeiro contato à renovação.
             </p>
 
             <div

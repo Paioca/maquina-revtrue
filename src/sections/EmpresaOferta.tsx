@@ -46,7 +46,7 @@ export function EmpresaOferta() {
           borderTop: "1px solid rgba(255,255,255,.06)",
         }}
       >
-        <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
+        <div className="lp-container" style={{ maxWidth: 1240, margin: "0 auto" }}>
           <div className="oferta-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 80px", alignItems: "start" }}>
 
             {/* Coluna esquerda: provocação + posicionamento */}
@@ -174,6 +174,7 @@ export function EmpresaOferta() {
                 <button
                   type="button"
                   onClick={() => setOpen(true)}
+                  className="lp-cta-btn"
                   style={{
                     background: orange,
                     color: "white",

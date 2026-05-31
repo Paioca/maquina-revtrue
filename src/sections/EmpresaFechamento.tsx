@@ -76,13 +76,14 @@ export function EmpresaFechamento() {
                     lineHeight: 1.3,
                   }}
                 >
-                  Em 45 minutos você entende por que não está fechando — e o que montar pra isso mudar. Se não sair da conversa com isso, você não perdeu nada.
+                  Em 45 minutos você entende por que não está fechando e o que montar pra isso mudar. Se não sair da conversa com isso, você não perdeu nada.
                 </p>
               </div>
 
               <button
                 type="button"
                 onClick={() => setOpen(true)}
+                className="lp-cta-btn"
                 style={{
                   background: navy,
                   color: "white",

@@ -239,3 +239,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+/* ─── LP maquina.revtrue · helpers mobile ─────────────────────── */
+/* Container padrão das seções da LP: gutter consistente */
+.lp-container { padding: 0 40px; }
+
+/* CTA full-width no mobile (evita texto quebrando dentro do botão) */
+@media (max-width: 768px) {
+  .lp-container { padding: 0 24px !important; }
+  .lp-cta-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* Barra CTA fixa no rodapé · só mobile */
+.lp-sticky-cta { display: none; }
+@media (max-width: 768px) {
+  .lp-sticky-cta {
+    display: block;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 60;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: rgba(20,24,31,.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(255,255,255,.1);
+  }
+}
+
+/* Espaço extra no footer pra barra CTA fixa não cobrir conteúdo (mobile) */
+@media (max-width: 768px) {
+  footer { padding-bottom: 100px !important; }
+}

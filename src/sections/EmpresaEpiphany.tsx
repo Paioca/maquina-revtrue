@@ -1,7 +1,6 @@
 /* EmpresaEpiphany — Epiphany Bridge ampla
  * A virada: você não está errando — falta a estrutura que ninguém te ensinou a montar */
 
-const navy = "#14181F";
 const navySoft = "#1E232C";
 const orange = "#D45A2A";
 
@@ -16,7 +15,7 @@ export function EmpresaEpiphany() {
         borderTop: "1px solid rgba(255,255,255,.06)",
       }}
     >
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
+      <div className="lp-container" style={{ maxWidth: 1240, margin: "0 auto" }}>
         <div className="epiphany-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 100px", alignItems: "start" }}>
 
           {/* Coluna esquerda: a história */}

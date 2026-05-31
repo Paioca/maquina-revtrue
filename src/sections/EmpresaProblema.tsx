@@ -7,7 +7,7 @@ const orange = "#D45A2A";
 const sintomas = [
   "Gera lead, faz reunião, manda proposta. Fica no aguardo.",
   "Faturamento parado há meses, mesmo com mais movimento.",
-  "Perde pra concorrente por preço porque não souber justificar o valor.",
+  "Perde pra concorrente no preço porque não sabe defender o valor.",
   "Equipe cresceu, resultado não acompanhou.",
   "Tem produto bom mas não sabe como apresentar pra fechar.",
   "Cada venda é uma negociação do zero. Sem padrão, sem critério.",
@@ -28,7 +28,7 @@ export function EmpresaProblema() {
         borderTop: "1px solid rgba(255,255,255,.06)",
       }}
     >
-      <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
+      <div className="lp-container" style={{ maxWidth: 1240, margin: "0 auto" }}>
 
         <h2
           className="font-display"

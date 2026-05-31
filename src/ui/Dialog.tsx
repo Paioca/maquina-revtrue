@@ -19,7 +19,7 @@ export function Dialog({ open, onOpenChange, title, children, className }: Dialo
         <RadixDialog.Content
           className={cn(
             "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2",
-            "w-full max-w-2xl max-h-[85vh] overflow-y-auto",
+            "w-[calc(100%-2rem)] max-w-2xl max-h-[85vh] overflow-y-auto",
             "bg-true-900 border border-true-800 rounded-3xl shadow-2xl",
             "p-8 md:p-10",
             "focus:outline-none",

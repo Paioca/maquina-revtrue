@@ -68,7 +68,7 @@ export function EmpresaHero() {
           <h1
             className="font-display"
             style={{
-              fontSize: "clamp(44px, 7.5vw, 118px)",
+              fontSize: "clamp(34px, 8vw, 118px)",
               lineHeight: 0.93,
               letterSpacing: "-0.045em",
               margin: 0,
@@ -98,6 +98,7 @@ export function EmpresaHero() {
             <button
               type="button"
               onClick={() => setOpen(true)}
+              className="lp-cta-btn"
               style={{
                 background: orange,
                 color: "white",

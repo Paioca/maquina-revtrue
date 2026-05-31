@@ -59,7 +59,7 @@ export function BookingModal({ open, onOpenChange }: Props) {
     <Dialog
       open={open}
       onOpenChange={onOpenChange}
-      title="Agendar Sessão de Receita"
+      title="Agendar Sessão de Diagnóstico"
       className="max-w-3xl"
     >
       <div className="flex flex-col gap-7">
@@ -86,8 +86,8 @@ export function BookingModal({ open, onOpenChange }: Props) {
           </h3>
           <p className="font-sans text-sm text-true-300 mt-1">
             {step === "form"
-              ? "60 minutos com os dois sócios. Documento escrito ao final, sem custo."
-              : "Sessão com os dois sócios da RevTrue. Confirmação por e-mail."}
+              ? "45 minutos direto com o Felipe. Documento escrito ao final, sem custo."
+              : "Conversa direto com o Felipe. Confirmação por e-mail."}
           </p>
         </div>
 

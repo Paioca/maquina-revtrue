@@ -14,14 +14,9 @@ const FOOTER_COLS = [
   {
     title: "Navegação",
     links: [
-      { l: "Problema", h: "/#problema" },
-      { l: "Como operamos", h: "/#metodo" },
-      { l: "O comparativo", h: "/#raas" },
-      { l: "Quem atendemos", h: "/#praquem" },
-      { l: "Como começa", h: "/#processo" },
-      { l: "O time", h: "/#time" },
-      { l: "How it works", h: "/como-funciona" },
-      { l: "Sobre", h: "/sobre" },
+      { l: "O problema", h: "/#problema" },
+      { l: "Como trabalhamos", h: "/#metodo" },
+      { l: "A sessão", h: "/#oferta" },
     ],
   },
   {
@@ -99,7 +94,7 @@ export function Footer() {
                 maxWidth: 280,
               }}
             >
-              Operadores de Receita, em modelo fracionado.
+              Diagnóstico comercial para empresas que querem crescer com estrutura.
             </p>
           </div>
           {FOOTER_COLS.map((col) => (
