@@ -1,26 +1,17 @@
-/* EmpresaProblema — Seção 3 · O Problema
- * Reframe: o vilão é a ausência de processo, não o vendedor */
+/* EmpresaProblema — Seção 3 · O Vilão
+ * StoryBrand: vilão externo (ausência de sistema) + problema interno (frustração) + filosófico
+ * $100M Offers: amplia o problema antes de oferecer a solução */
 
 const navy = "#14181F";
-const navySoft = "#1E232C";
 const orange = "#D45A2A";
 
-const causas = [
-  {
-    n: "01",
-    titulo: "Sem etapas claras",
-    desc: "Cada vendedor inventa o processo do jeito dele. Impossível melhorar o que não está definido.",
-  },
-  {
-    n: "02",
-    titulo: "Sem número certo pra acompanhar",
-    desc: "Você gerencia no feeling. Sem métrica, a decisão fica na intuição — e a intuição não escala.",
-  },
-  {
-    n: "03",
-    titulo: "Sem critério de contratação",
-    desc: "Você repete o mesmo erro com a próxima pessoa. O problema não estava em quem vende.",
-  },
+const sinais = [
+  { n: "01", texto: "Meta que não fecha, mesmo com time crescendo." },
+  { n: "02", texto: "Vendedor novo repete o resultado do anterior." },
+  { n: "03", texto: "CRM comprado, mas a operação ainda roda no feeling." },
+  { n: "04", texto: "Você sabe quanto vendeu, mas não sabe onde perdeu." },
+  { n: "05", texto: "Reunião de pipeline vira conversa de estimativa." },
+  { n: "06", texto: "Resultado depende de quem está na cadeira naquele mês." },
 ];
 
 export function EmpresaProblema() {
@@ -28,137 +19,118 @@ export function EmpresaProblema() {
     <section
       id="problema"
       style={{
-        background: navySoft,
+        background: navy,
         color: "white",
         padding: "120px 0",
         borderTop: "1px solid rgba(255,255,255,.06)",
       }}
     >
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
-        {/* Headline principal */}
-        <h2
-          className="font-display"
-          style={{
-            fontSize: "clamp(40px, 6.5vw, 100px)",
-            lineHeight: 0.95,
-            letterSpacing: "-0.04em",
-            margin: 0,
-            fontWeight: 700,
-            maxWidth: 1000,
-            color: "white",
-          }}
-        >
-          Você não tem problema<br />
-          de vendedor.<br />
-          <span style={{ color: orange }}>Você tem problema de estrutura.</span>
-        </h2>
+        <div className="problema-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 80px", alignItems: "start" }}>
 
-        {/* Frase de clareza */}
-        <div
-          style={{
-            marginTop: 56,
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "0 64px",
-          }}
-          className="problema-intro-grid"
-        >
-          <p style={{ fontSize: 19, lineHeight: 1.65, color: "rgba(255,255,255,.8)", margin: 0 }}>
-            Quando um vendedor não bate meta, pode ser ele. Quando o time inteiro não bate, é a empresa.
-          </p>
-          <p style={{ fontSize: 19, lineHeight: 1.65, color: "rgba(255,255,255,.8)", margin: 0 }}>
-            A maioria dos donos tenta resolver isso contratando mais gente, aumentando comissão ou comprando um CRM novo. Funciona por um mês, dois. Depois volta pro mesmo lugar.
-          </p>
-        </div>
-
-        {/* Três causas */}
-        <div
-          className="problema-causas"
-          style={{
-            marginTop: 64,
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 24,
-          }}
-        >
-          {causas.map((c) => (
-            <div
-              key={c.n}
+          {/* Coluna esquerda */}
+          <div>
+            <h2
+              className="font-display"
               style={{
-                padding: "32px 28px",
-                background: "rgba(255,255,255,.04)",
-                borderRadius: 16,
-                border: "1px solid rgba(255,255,255,.08)",
+                fontSize: "clamp(40px, 6vw, 92px)",
+                lineHeight: 0.95,
+                letterSpacing: "-0.04em",
+                margin: 0,
+                fontWeight: 700,
+                color: "white",
               }}
             >
-              <span
+              O problema<br />
+              não é quem<br />
+              <span style={{ color: orange }}>vende.<br />É como.</span>
+            </h2>
+
+            <p style={{ fontSize: 19, lineHeight: 1.65, color: "rgba(255,255,255,.75)", margin: "44px 0 0", maxWidth: 480 }}>
+              Quando um vendedor não performa, pode ser ele. Quando o time todo não performa, a causa está acima das pessoas — está em como a operação foi montada.
+            </p>
+
+            <p style={{ fontSize: 19, lineHeight: 1.65, color: "rgba(255,255,255,.75)", margin: "20px 0 0", maxWidth: 480 }}>
+              A solução não é trocar quem vende. É projetar como a venda deve funcionar — com etapas definidas, critérios claros e números que guiam decisão.
+            </p>
+          </div>
+
+          {/* Coluna direita: sinais */}
+          <div>
+            <p
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: 12,
+                color: "rgba(255,255,255,.4)",
+                letterSpacing: ".1em",
+                textTransform: "uppercase",
+                margin: "0 0 32px",
+              }}
+            >
+              Reconhece algum desses?
+            </p>
+            <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+              {sinais.map((s, i) => (
+                <li
+                  key={s.n}
+                  style={{
+                    display: "flex",
+                    gap: 20,
+                    padding: "20px 0",
+                    borderBottom: i < sinais.length - 1 ? "1px solid rgba(255,255,255,.07)" : "none",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: 11,
+                      color: orange,
+                      fontWeight: 700,
+                      letterSpacing: ".06em",
+                      paddingTop: 3,
+                      flexShrink: 0,
+                    }}
+                  >
+                    {s.n}
+                  </span>
+                  <span style={{ fontSize: 17, lineHeight: 1.55, color: "rgba(255,255,255,.82)", fontWeight: 500 }}>
+                    {s.texto}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div
+              style={{
+                marginTop: 32,
+                padding: "22px 26px",
+                background: `${orange}12`,
+                borderRadius: 12,
+                border: `1px solid ${orange}38`,
+              }}
+            >
+              <p
                 className="font-display"
                 style={{
-                  fontSize: 52,
-                  fontWeight: 700,
-                  letterSpacing: "-0.04em",
-                  color: orange,
-                  lineHeight: 0.9,
-                  display: "block",
-                  marginBottom: 20,
-                }}
-              >
-                {c.n}
-              </span>
-              <h3
-                className="font-display"
-                style={{
-                  fontSize: "clamp(18px, 1.8vw, 22px)",
+                  fontSize: "clamp(16px, 1.6vw, 20px)",
                   fontWeight: 700,
                   letterSpacing: "-0.01em",
-                  margin: "0 0 14px",
-                  color: "white",
+                  color: orange,
+                  margin: 0,
+                  lineHeight: 1.3,
                 }}
               >
-                {c.titulo}
-              </h3>
-              <p style={{ fontSize: 16, lineHeight: 1.6, color: "rgba(255,255,255,.7)", margin: 0 }}>
-                {c.desc}
+                Se dois ou mais aparecem juntos, você não tem problema de execução. Você tem problema de estrutura.
               </p>
             </div>
-          ))}
-        </div>
-
-        {/* Fechamento empático */}
-        <div
-          style={{
-            marginTop: 56,
-            maxWidth: 880,
-            padding: "32px 36px",
-            background: `${orange}12`,
-            borderRadius: 16,
-            border: `1px solid ${orange}35`,
-          }}
-        >
-          <p
-            className="font-display"
-            style={{
-              fontSize: "clamp(22px, 2.5vw, 32px)",
-              lineHeight: 1.25,
-              letterSpacing: "-0.02em",
-              fontWeight: 700,
-              color: "white",
-              margin: 0,
-            }}
-          >
-            Não é culpa sua. Ninguém te ensinou a montar isso.{" "}
-            <span style={{ color: orange }}>O "depois" chegou.</span>
-          </p>
-          <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.7)", margin: "16px 0 0" }}>
-            Você cresceu resolvendo o problema do produto, da operação, da entrega. A venda ficou pra depois.
-          </p>
+          </div>
         </div>
       </div>
 
       <style>{`
         @media (max-width: 900px) {
-          .problema-intro-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
-          .problema-causas { grid-template-columns: 1fr !important; }
+          .problema-grid { grid-template-columns: 1fr !important; gap: 56px !important; }
           #problema { padding: 80px 0 !important; }
         }
       `}</style>

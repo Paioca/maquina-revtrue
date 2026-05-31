@@ -1,5 +1,6 @@
-/* EmpresaFechamento — Seção 7 · Fechamento
- * Garantia implícita + CTA final */
+/* EmpresaFechamento — Seção 7 · Stakes + CTA Final
+ * StoryBrand: o que o herói perde se não agir + o que ganha se agir
+ * $100M Offers: elimina última objeção + torna óbvio dizer sim */
 import { useState } from "react";
 import { Icon } from "../ui";
 import { BookingModal } from "../components/BookingModal";
@@ -16,43 +17,97 @@ export function EmpresaFechamento() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div className="fechamento-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 80px", alignItems: "center" }}>
 
-            {/* Coluna esquerda: headline + garantia */}
+            {/* Coluna esquerda: headline de stakes */}
             <div>
               <h2
                 className="font-display"
                 style={{
-                  fontSize: "clamp(40px, 6vw, 88px)",
-                  lineHeight: 0.95,
-                  letterSpacing: "-0.04em",
+                  fontSize: "clamp(38px, 5.5vw, 80px)",
+                  lineHeight: 0.97,
+                  letterSpacing: "-0.038em",
                   margin: 0,
                   fontWeight: 700,
                   color: "white",
                 }}
               >
-                Em 45 minutos você sabe onde a sua venda trava.{" "}
-                <em
-                  style={{
-                    fontStyle: "italic",
-                    color: navy,
-                    fontWeight: 700,
-                  }}
-                >
-                  Ou a conversa foi de graça de qualquer jeito.
-                </em>
+                Daqui a seis meses, a sua venda vai estar diferente.
               </h2>
+              <p
+                className="font-display"
+                style={{
+                  fontSize: "clamp(22px, 2.8vw, 38px)",
+                  lineHeight: 1.1,
+                  letterSpacing: "-0.025em",
+                  margin: "24px 0 0",
+                  fontWeight: 700,
+                  color: navy,
+                  fontStyle: "italic",
+                }}
+              >
+                A pergunta é: diferente como?
+              </p>
             </div>
 
-            {/* Coluna direita: contexto + CTA */}
+            {/* Coluna direita: dois caminhos + CTA */}
             <div>
-              <p style={{ fontSize: 18, lineHeight: 1.65, color: "rgba(20,24,31,.85)", margin: 0 }}>
-                A Revtrue atende um número pequeno de empresas por vez. Não é postura. É porque operar de dentro exige foco, e foco tem limite.
+              {/* Caminho sem ação */}
+              <div
+                style={{
+                  padding: "24px 28px",
+                  background: "rgba(20,24,31,.12)",
+                  borderRadius: 14,
+                  marginBottom: 16,
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: 11,
+                    color: "rgba(20,24,31,.5)",
+                    letterSpacing: ".1em",
+                    textTransform: "uppercase",
+                    margin: "0 0 12px",
+                  }}
+                >
+                  Sem mudar a estrutura
+                </p>
+                <p style={{ fontSize: 16, lineHeight: 1.6, color: "rgba(20,24,31,.75)", margin: 0 }}>
+                  Novo ciclo de contratação. Mesma frustração. Meta que vira meta do próximo mês. Time que não sabe o que fazer quando o número não aparece.
+                </p>
+              </div>
+
+              {/* Caminho com ação */}
+              <div
+                style={{
+                  padding: "24px 28px",
+                  background: "rgba(20,24,31,.18)",
+                  borderRadius: 14,
+                  marginBottom: 36,
+                  border: "1px solid rgba(20,24,31,.25)",
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: 11,
+                    color: navy,
+                    fontWeight: 700,
+                    letterSpacing: ".1em",
+                    textTransform: "uppercase",
+                    margin: "0 0 12px",
+                  }}
+                >
+                  Com o processo instalado
+                </p>
+                <p style={{ fontSize: 16, lineHeight: 1.6, color: navy, margin: 0, fontWeight: 500 }}>
+                  Venda previsível. Time que executa sem depender de improviso. Você sabe onde o negócio está em cada etapa — e o que fazer quando trava.
+                </p>
+              </div>
+
+              <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(20,24,31,.82)", margin: "0 0 32px" }}>
+                O próximo passo custa 5 minutos pra preencher e 45 minutos de conversa. Em troca, você sai sabendo exatamente onde sua operação trava e o que mudar primeiro.
               </p>
-              <p style={{ fontSize: 18, lineHeight: 1.65, color: "rgba(20,24,31,.85)", margin: "20px 0 0" }}>
-                Se você chegou até aqui, já tem a suspeita de que o problema não é o vendedor.
-              </p>
-              <p style={{ fontSize: 18, lineHeight: 1.65, color: "rgba(20,24,31,.85)", margin: "20px 0 0" }}>
-                O próximo passo custa 5 minutos do seu tempo pra preencher e 45 minutos de conversa. O que você recebe em troca é saber, com clareza, onde a venda está travando e o que mudar primeiro.
-              </p>
+
               <p
                 className="font-display"
                 style={{
@@ -60,7 +115,7 @@ export function EmpresaFechamento() {
                   fontWeight: 700,
                   letterSpacing: "-0.01em",
                   color: navy,
-                  margin: "28px 0 40px",
+                  margin: "0 0 32px",
                   lineHeight: 1.3,
                 }}
               >

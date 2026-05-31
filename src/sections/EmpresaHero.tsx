@@ -1,5 +1,7 @@
-/* EmpresaHero — Seção 1 · Hook acima da dobra
- * Público: dono de empresa tradicional, R$5MM–R$60MM, time comercial travado */
+/* EmpresaHero — Seção 1 · Hook
+ * DotCom Secrets: Bait que atrai o cliente ideal
+ * StoryBrand: vilão externo + CTA direto
+ * $100M Offers: dream outcome na headline */
 import { useState } from "react";
 import { Icon } from "../ui";
 import { BookingModal } from "../components/BookingModal";
@@ -30,7 +32,6 @@ export function EmpresaHero() {
             WebkitMaskImage: "radial-gradient(ellipse at center, black 40%, transparent 75%)",
           }}
         />
-        {/* Glow laranja */}
         <div
           aria-hidden="true"
           style={{
@@ -46,7 +47,6 @@ export function EmpresaHero() {
         />
 
         <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto" }}>
-          {/* Badge */}
           <div
             style={{
               display: "inline-flex",
@@ -71,54 +71,66 @@ export function EmpresaHero() {
           <h1
             className="font-display"
             style={{
-              fontSize: "clamp(40px, 7vw, 110px)",
-              lineHeight: 0.95,
-              letterSpacing: "-0.04em",
+              fontSize: "clamp(44px, 7.5vw, 118px)",
+              lineHeight: 0.93,
+              letterSpacing: "-0.045em",
               margin: 0,
               fontWeight: 700,
               color: "white",
               maxWidth: 1100,
             }}
           >
-            Você já trocou vendedor,<br />
-            aumentou comissão<br />
-            e comprou CRM.<br />
-            <span style={{ color: orange }}>A meta ainda não fecha.</span>
+            Sua venda não<br />
+            trava por falta<br />
+            de vendedor.<br />
+            <span style={{ color: orange }}>Trava por falta<br />de processo.</span>
           </h1>
 
           <p
             style={{
-              fontSize: 21,
-              lineHeight: 1.5,
+              fontSize: 20,
+              lineHeight: 1.6,
               color: "rgba(255,255,255,.72)",
-              margin: "44px 0 0",
-              maxWidth: 680,
+              margin: "48px 0 0",
+              maxWidth: 640,
             }}
           >
-            Talvez o problema nunca foi o vendedor. O problema é que ninguém nunca montou o jeito de vender da sua empresa de verdade.
+            Em 45 minutos, você sai sabendo exatamente onde sua operação comercial trava — e o que mudar primeiro para ter uma venda que funciona independente de quem está na cadeira.
           </p>
 
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            style={{
-              marginTop: 44,
-              background: orange,
-              color: "white",
-              border: 0,
-              padding: "20px 32px",
-              borderRadius: 12,
-              fontWeight: 700,
-              fontSize: 16,
-              cursor: "pointer",
-              fontFamily: "inherit",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 12,
-            }}
-          >
-            Quero entender onde minha venda trava <Icon name="arrow-right" size="md" />
-          </button>
+          <div style={{ marginTop: 44, display: "flex", flexDirection: "column", gap: 14, alignItems: "flex-start" }}>
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              style={{
+                background: orange,
+                color: "white",
+                border: 0,
+                padding: "20px 32px",
+                borderRadius: 12,
+                fontWeight: 700,
+                fontSize: 16,
+                cursor: "pointer",
+                fontFamily: "inherit",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 12,
+              }}
+            >
+              Quero entender onde minha venda trava <Icon name="arrow-right" size="md" />
+            </button>
+            <p
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: 12,
+                color: "rgba(255,255,255,.45)",
+                margin: 0,
+                letterSpacing: ".04em",
+              }}
+            >
+              5 min pra preencher · 45 min de conversa direta · sem proposta no final
+            </p>
+          </div>
         </div>
       </section>
 

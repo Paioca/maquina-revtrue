@@ -1,5 +1,7 @@
 /* EmpresaOferta — Seção 6 · A Oferta
- * Grand Slam Offer com provocação ao mercado */
+ * $100M Offers: stack de valor + elimina objeções + dream outcome
+ * DotCom Secrets: High-Ticket Application Funnel
+ * StoryBrand: CTA claro + diferencia do mercado */
 import { useState } from "react";
 import { Icon } from "../ui";
 import { BookingModal } from "../components/BookingModal";
@@ -7,11 +9,27 @@ import { BookingModal } from "../components/BookingModal";
 const navy = "#14181F";
 const orange = "#D45A2A";
 
-const entrega = [
-  "Diagnóstico direto de onde a venda trava: processo, time, número, ou os três",
-  "O que mudar primeiro, na ordem certa",
-  "Documento escrito com o que mapeamos, pra você levar e usar como quiser",
-  "Se decidir continuar trabalhando junto, você me procura. Eu não vou te ligar, não vou mandar follow-up, não vou criar urgência falsa",
+const stack = [
+  {
+    item: "45 minutos direto com Felipe",
+    detalhe: "Sem SDR, sem assistente, sem roteiro de qualificação. Você fala com quem vai fazer o trabalho.",
+  },
+  {
+    item: "Diagnóstico honesto da sua operação",
+    detalhe: "Onde a venda trava, o que o número está dizendo, e o que você pode mudar essa semana — não no próximo trimestre.",
+  },
+  {
+    item: "Prioridade clara do que resolver primeiro",
+    detalhe: "Não uma lista genérica de melhorias. O que tem maior impacto no menor tempo, na ordem certa.",
+  },
+  {
+    item: "Documento escrito do que mapeamos",
+    detalhe: "Você leva. Usa como quiser. Mesmo que não sigamos juntos depois.",
+  },
+  {
+    item: "Zero pressão pra fechar qualquer coisa",
+    detalhe: "Se fizer sentido continuar, você me procura. Eu não vou te ligar, mandar follow-up nem criar urgência falsa.",
+  },
 ];
 
 export function EmpresaOferta() {
@@ -31,43 +49,53 @@ export function EmpresaOferta() {
         <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
           <div className="oferta-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 80px", alignItems: "start" }}>
 
-            {/* Coluna esquerda: provocação */}
+            {/* Coluna esquerda: provocação + posicionamento */}
             <div>
+              <p
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: 12,
+                  color: orange,
+                  fontWeight: 700,
+                  letterSpacing: ".15em",
+                  textTransform: "uppercase",
+                  margin: "0 0 28px",
+                }}
+              >
+                A sessão de diagnóstico
+              </p>
               <h2
                 className="font-display"
                 style={{
-                  fontSize: "clamp(32px, 4vw, 56px)",
-                  lineHeight: 1.05,
-                  letterSpacing: "-0.03em",
+                  fontSize: "clamp(34px, 4.5vw, 66px)",
+                  lineHeight: 1.0,
+                  letterSpacing: "-0.035em",
                   margin: 0,
                   fontWeight: 700,
                   color: "white",
                 }}
               >
-                Vou ser direto: toda "sessão gratuita" do mercado é{" "}
-                <span style={{ color: orange }}>pitch disfarçado.</span>
+                Toda "sessão gratuita" do mercado é pitch{" "}
+                <span style={{ color: orange }}>disfarçado de diagnóstico.</span>
               </h2>
 
               <p style={{ fontSize: 18, lineHeight: 1.65, color: "rgba(255,255,255,.75)", margin: "32px 0 0" }}>
-                Você agenda, fala com um assistente que faz perguntas de um roteiro, e no final recebe uma proposta comercial com "condições especiais pra fechar hoje".
-              </p>
-              <p style={{ fontSize: 18, lineHeight: 1.65, color: "rgba(255,255,255,.75)", margin: "20px 0 0" }}>
-                Não aprendeu nada. Só perdeu uma hora.
+                Você agenda. Um assistente faz perguntas de um roteiro. No final, chega uma proposta com "condições especiais pra fechar hoje". Você não aprendeu nada. Só perdeu uma hora.
               </p>
 
               <div
                 style={{
-                  marginTop: 36,
+                  margin: "36px 0",
                   padding: "28px 32px",
-                  background: `${orange}15`,
-                  borderRadius: 16,
-                  border: `1px solid ${orange}40`,
+                  background: "rgba(255,255,255,.04)",
+                  borderLeft: `3px solid ${orange}`,
+                  borderRadius: "0 14px 14px 0",
                 }}
               >
                 <p
                   className="font-display"
                   style={{
-                    fontSize: "clamp(20px, 2vw, 26px)",
+                    fontSize: "clamp(18px, 2vw, 24px)",
                     fontWeight: 700,
                     letterSpacing: "-0.015em",
                     color: "white",
@@ -75,27 +103,17 @@ export function EmpresaOferta() {
                     lineHeight: 1.3,
                   }}
                 >
-                  Comigo é diferente. Você fala diretamente comigo.{" "}
-                  <span style={{ color: orange }}>Sem intermediário, sem SDR, sem roteiro de qualificação.</span>
+                  Na sessão de diagnóstico da Revtrue, você fala diretamente comigo. Sem intermediário. Sem roteiro. Sem pitch no final.
                 </p>
               </div>
 
-              <p style={{ fontSize: 18, lineHeight: 1.65, color: "rgba(255,255,255,.8)", margin: "28px 0 0" }}>
-                Em 45 minutos eu te digo o que está travando a sua venda e o que você pode começar a fazer{" "}
-                <strong style={{ color: "white" }}>essa semana</strong>. Não no mês que vem. Não "depois de fechar contrato". Essa semana.
-              </p>
-            </div>
-
-            {/* Coluna direita: foto inline + o que você recebe */}
-            <div>
-              {/* Foto pequena inline — reforça "você fala comigo" */}
+              {/* Avatar do Felipe */}
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
                   gap: 16,
-                  marginBottom: 36,
-                  padding: "16px 20px",
+                  padding: "18px 22px",
                   background: "rgba(255,255,255,.04)",
                   borderRadius: 14,
                   border: "1px solid rgba(255,255,255,.08)",
@@ -111,55 +129,48 @@ export function EmpresaOferta() {
                 <div>
                   <p style={{ margin: 0, fontWeight: 700, fontSize: 15, color: "white" }}>Felipe Galli</p>
                   <p style={{ margin: "3px 0 0", fontSize: 13, color: "rgba(255,255,255,.5)", fontFamily: "var(--font-mono)", letterSpacing: ".04em" }}>
-                    Founder · Revtrue
+                    É com quem você vai falar
                   </p>
                 </div>
               </div>
+            </div>
 
+            {/* Coluna direita: stack de valor + CTA */}
+            <div>
               <p
                 style={{
                   fontFamily: "var(--font-mono)",
                   fontSize: 12,
-                  color: orange,
-                  fontWeight: 700,
-                  letterSpacing: ".12em",
+                  color: "rgba(255,255,255,.4)",
+                  letterSpacing: ".1em",
                   textTransform: "uppercase",
                   margin: "0 0 28px",
                 }}
               >
-                O que você recebe
+                O que você recebe na sessão
               </p>
 
-              <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 0 }}>
-                {entrega.map((item, i) => (
+              <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+                {stack.map((s, i) => (
                   <li
                     key={i}
                     style={{
-                      display: "flex",
-                      gap: 20,
-                      padding: "24px 0",
-                      borderBottom: i < entrega.length - 1 ? "1px solid rgba(255,255,255,.08)" : "none",
+                      padding: "22px 0",
+                      borderBottom: i < stack.length - 1 ? "1px solid rgba(255,255,255,.07)" : "none",
                     }}
                   >
-                    <span
-                      style={{
-                        fontFamily: "var(--font-mono)",
-                        fontSize: 11,
-                        color: orange,
-                        fontWeight: 700,
-                        letterSpacing: ".06em",
-                        paddingTop: 3,
-                        flexShrink: 0,
-                      }}
-                    >
-                      0{i + 1}
-                    </span>
-                    <span style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(255,255,255,.82)" }}>{item}</span>
+                    <p style={{ margin: 0, fontWeight: 700, fontSize: 16, color: "white", lineHeight: 1.4 }}>
+                      <span style={{ color: orange, marginRight: 10 }}>✓</span>
+                      {s.item}
+                    </p>
+                    <p style={{ margin: "6px 0 0 26px", fontSize: 15, color: "rgba(255,255,255,.6)", lineHeight: 1.55 }}>
+                      {s.detalhe}
+                    </p>
                   </li>
                 ))}
               </ul>
 
-              <div style={{ marginTop: 44, display: "flex", flexDirection: "column", gap: 14, alignItems: "flex-start" }}>
+              <div style={{ marginTop: 40, display: "flex", flexDirection: "column", gap: 14, alignItems: "flex-start" }}>
                 <button
                   type="button"
                   onClick={() => setOpen(true)}
@@ -184,12 +195,12 @@ export function EmpresaOferta() {
                   style={{
                     fontFamily: "var(--font-mono)",
                     fontSize: 12,
-                    color: "rgba(255,255,255,.5)",
+                    color: "rgba(255,255,255,.45)",
                     margin: 0,
-                    letterSpacing: ".02em",
+                    letterSpacing: ".03em",
                   }}
                 >
-                  5 minutos pra preencher · 45 minutos de conversa real · sem pitch no final
+                  5 min pra preencher · 45 min de conversa real · sem pitch no final
                 </p>
               </div>
             </div>
@@ -201,7 +212,7 @@ export function EmpresaOferta() {
 
       <style>{`
         @media (max-width: 900px) {
-          .oferta-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+          .oferta-grid { grid-template-columns: 1fr !important; gap: 56px !important; }
           #oferta { padding: 80px 0 !important; }
         }
       `}</style>

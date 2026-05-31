@@ -1,24 +1,10 @@
 /* EmpresaEpiphany — Seção 2 · Epiphany Bridge
- * História de identificação antes de qualquer argumento */
+ * DotCom Secrets: a história que instala a crença certa
+ * A virada: o sistema faz o vendedor, não o contrário */
 
 const navy = "#14181F";
 const navySoft = "#1E232C";
 const orange = "#D45A2A";
-
-const casos = [
-  {
-    setor: "Distribuidora",
-    desc: "14 vendedores em campo",
-  },
-  {
-    setor: "Escritório de advocacia",
-    desc: "5 sócios, sem método de captação",
-  },
-  {
-    setor: "Prestador de serviço",
-    desc: "18 anos de mercado, contratos parando de renovar",
-  },
-];
 
 export function EmpresaEpiphany() {
   return (
@@ -32,124 +18,150 @@ export function EmpresaEpiphany() {
       }}
     >
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
-        {/* Quote de abertura */}
-        <div
-          style={{
-            paddingLeft: 28,
-            borderLeft: `3px solid ${orange}`,
-            marginBottom: 56,
-          }}
-        >
-          <p
-            className="font-display"
-            style={{
-              fontSize: "clamp(26px, 3.2vw, 42px)",
-              lineHeight: 1.2,
-              letterSpacing: "-0.02em",
-              fontWeight: 700,
-              margin: 0,
-              color: "white",
-            }}
-          >
-            "Felipe, eu preciso de um vendedor melhor."
-          </p>
-          <p
-            style={{
-              fontSize: 15,
-              color: "rgba(255,255,255,.5)",
-              margin: "12px 0 0",
-              fontFamily: "var(--font-mono)",
-              letterSpacing: ".04em",
-            }}
-          >
-            — frase que eu já ouvi de centenas de donos de empresa
-          </p>
-        </div>
+        <div className="epiphany-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 100px", alignItems: "start" }}>
 
-        <div className="epiphany-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 80px", alignItems: "start" }}>
-          {/* Coluna esquerda: os três casos */}
+          {/* Coluna esquerda: a história */}
           <div>
-            <p style={{ fontSize: 19, lineHeight: 1.65, color: "rgba(255,255,255,.8)", margin: 0 }}>
-              Setores completamente diferentes. Empresas completamente diferentes.
-            </p>
-
-            <div style={{ marginTop: 40, display: "flex", flexDirection: "column", gap: 16 }}>
-              {casos.map((c, i) => (
-                <div
-                  key={i}
-                  style={{
-                    display: "flex",
-                    gap: 20,
-                    padding: "20px 24px",
-                    background: "rgba(255,255,255,.04)",
-                    borderRadius: 12,
-                    border: "1px solid rgba(255,255,255,.07)",
-                    alignItems: "center",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: 11,
-                      color: orange,
-                      fontWeight: 700,
-                      letterSpacing: ".08em",
-                      minWidth: 24,
-                    }}
-                  >
-                    0{i + 1}
-                  </span>
-                  <div>
-                    <p style={{ margin: 0, fontWeight: 700, fontSize: 16, color: "white" }}>{c.setor}</p>
-                    <p style={{ margin: "4px 0 0", fontSize: 14, color: "rgba(255,255,255,.55)" }}>{c.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Coluna direita: o diagnóstico */}
-          <div>
-            <p style={{ fontSize: 19, lineHeight: 1.65, color: "rgba(255,255,255,.8)", margin: 0 }}>
-              Mas quando eu sentava pra entender a operação, o problema era o mesmo nos três:
-            </p>
             <p
-              className="font-display"
               style={{
-                fontSize: "clamp(22px, 2.4vw, 30px)",
-                lineHeight: 1.25,
-                letterSpacing: "-0.02em",
+                fontFamily: "var(--font-mono)",
+                fontSize: 12,
+                color: orange,
                 fontWeight: 700,
-                color: "white",
-                margin: "28px 0",
+                letterSpacing: ".15em",
+                textTransform: "uppercase",
+                margin: "0 0 32px",
               }}
             >
-              Ninguém sabia em que ponto da venda os negócios estavam travando.
+              O que eu aprendi na prática
             </p>
-            <p style={{ fontSize: 18, lineHeight: 1.65, color: "rgba(255,255,255,.75)", margin: 0 }}>
-              Não tinha etapa definida. Não tinha número que guiasse decisão. A venda dependia do feeling de quem estava na cadeira naquele dia.
+
+            <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: 0 }}>
+              Passei anos operando dentro das estruturas comerciais da Oracle e da RD Station. Empresas que constroem processos de venda com a mesma engenharia que usam pra construir produto.
             </p>
+            <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: "24px 0 0" }}>
+              Aprendi uma coisa que nenhum curso de vendas ensina:
+            </p>
+
+            {/* Crença instalada */}
             <div
               style={{
-                marginTop: 36,
-                padding: "24px 28px",
-                background: `${orange}15`,
-                borderRadius: 12,
-                border: `1px solid ${orange}40`,
+                margin: "36px 0",
+                padding: "32px 36px",
+                borderLeft: `4px solid ${orange}`,
+                background: "rgba(255,255,255,.03)",
+                borderRadius: "0 16px 16px 0",
               }}
             >
               <p
                 className="font-display"
                 style={{
-                  fontSize: "clamp(20px, 2vw, 26px)",
+                  fontSize: "clamp(22px, 2.6vw, 34px)",
+                  lineHeight: 1.2,
+                  letterSpacing: "-0.025em",
                   fontWeight: 700,
-                  letterSpacing: "-0.015em",
-                  color: orange,
+                  color: "white",
                   margin: 0,
-                  lineHeight: 1.25,
                 }}
               >
-                O dono achava que precisava trocar gente. O que precisava era montar o processo.
+                Um vendedor bom colocado em uma empresa sem processo vira um vendedor mediano em 90 dias.
+              </p>
+            </div>
+
+            <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: 0 }}>
+              O processo não é o suporte da venda. O processo <em style={{ color: "white", fontStyle: "normal", fontWeight: 600 }}>é</em> a venda. O vendedor executa o que foi projetado — e quando não existe projeto, cada um improvisa do jeito que sabe.
+            </p>
+            <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: "24px 0 0" }}>
+              Quando saí das grandes empresas e comecei a trabalhar com negócios menores, vi o mesmo padrão do outro lado: donos com operações boas, times com potencial real — e uma venda que não entregava porque ninguém tinha projetado como ela deveria funcionar.
+            </p>
+          </div>
+
+          {/* Coluna direita: a virada de crença */}
+          <div style={{ paddingTop: 8 }}>
+            <div
+              style={{
+                padding: "36px 32px",
+                background: "rgba(255,255,255,.04)",
+                borderRadius: 20,
+                border: "1px solid rgba(255,255,255,.08)",
+                marginBottom: 24,
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: 11,
+                  color: "rgba(255,255,255,.4)",
+                  letterSpacing: ".1em",
+                  textTransform: "uppercase",
+                  margin: "0 0 20px",
+                }}
+              >
+                A crença errada
+              </p>
+              <p
+                className="font-display"
+                style={{
+                  fontSize: "clamp(18px, 1.8vw, 22px)",
+                  fontWeight: 700,
+                  letterSpacing: "-0.015em",
+                  color: "rgba(255,255,255,.55)",
+                  margin: 0,
+                  lineHeight: 1.35,
+                  textDecoration: "line-through",
+                  textDecorationColor: "rgba(255,255,255,.25)",
+                }}
+              >
+                "Se eu contratar o vendedor certo, a meta fecha."
+              </p>
+            </div>
+
+            <div
+              style={{
+                padding: "36px 32px",
+                background: `${orange}14`,
+                borderRadius: 20,
+                border: `1px solid ${orange}45`,
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: 11,
+                  color: orange,
+                  letterSpacing: ".1em",
+                  textTransform: "uppercase",
+                  margin: "0 0 20px",
+                }}
+              >
+                O que é verdade
+              </p>
+              <p
+                className="font-display"
+                style={{
+                  fontSize: "clamp(18px, 1.8vw, 22px)",
+                  fontWeight: 700,
+                  letterSpacing: "-0.015em",
+                  color: "white",
+                  margin: 0,
+                  lineHeight: 1.35,
+                }}
+              >
+                "O vendedor certo só performa dentro de um processo certo. Sem o processo, você repete o mesmo ciclo com a próxima pessoa."
+              </p>
+            </div>
+
+            <div
+              style={{
+                marginTop: 32,
+                padding: "24px 28px",
+                background: "rgba(255,255,255,.03)",
+                borderRadius: 14,
+                border: "1px solid rgba(255,255,255,.06)",
+              }}
+            >
+              <p style={{ fontSize: 16, lineHeight: 1.6, color: "rgba(255,255,255,.7)", margin: 0 }}>
+                Não é culpa sua não saber disso. Ninguém te ensinou a projetar uma operação comercial. Você aprendeu a vender na raça — e isso funcionou até um ponto. O próximo degrau exige estrutura.
               </p>
             </div>
           </div>
