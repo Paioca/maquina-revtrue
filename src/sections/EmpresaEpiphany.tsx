@@ -100,10 +100,10 @@ export function EmpresaEpiphany() {
               </p>
               <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 14 }}>
                 {[
-                  "Resultado depende de quem está na cadeira",
-                  "Cada ciclo parece o anterior",
-                  "Você trabalha mais pra faturar igual",
-                  "Não sabe o que mudar primeiro",
+                  "Reunião de pipeline vira conversa de estimativa",
+                  "Proposta sai sem saber se vai fechar",
+                  "Não sabe em que etapa o negócio travou",
+                  "Não consegue replicar o que o melhor vendedor faz",
                 ].map((item, i) => (
                   <li key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
                     <span style={{ color: "rgba(255,255,255,.25)", fontSize: 14, flexShrink: 0, paddingTop: 2 }}>—</span>
