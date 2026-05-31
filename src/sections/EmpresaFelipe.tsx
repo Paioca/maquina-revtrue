@@ -21,8 +21,28 @@ export function EmpresaFelipe() {
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
         <div className="felipe-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 80px", alignItems: "start" }}>
 
-          {/* Coluna esquerda */}
+          {/* Coluna esquerda: foto + nome + logos */}
           <div>
+            {/* Foto */}
+            <div
+              style={{
+                width: "100%",
+                maxWidth: 420,
+                borderRadius: 20,
+                overflow: "hidden",
+                marginBottom: 36,
+                border: "1px solid rgba(255,255,255,.08)",
+              }}
+            >
+              <img
+                src="/felipe.webp"
+                alt="Felipe Galli — Founder da Revtrue"
+                width={420}
+                height={420}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </div>
+
             <p
               style={{
                 fontFamily: "var(--font-mono)",

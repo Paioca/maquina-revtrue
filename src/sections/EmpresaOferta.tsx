@@ -86,8 +86,36 @@ export function EmpresaOferta() {
               </p>
             </div>
 
-            {/* Coluna direita: o que você recebe */}
+            {/* Coluna direita: foto inline + o que você recebe */}
             <div>
+              {/* Foto pequena inline — reforça "você fala comigo" */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 16,
+                  marginBottom: 36,
+                  padding: "16px 20px",
+                  background: "rgba(255,255,255,.04)",
+                  borderRadius: 14,
+                  border: "1px solid rgba(255,255,255,.08)",
+                }}
+              >
+                <img
+                  src="/felipe.webp"
+                  alt="Felipe Galli"
+                  width={56}
+                  height={56}
+                  style={{ width: 56, height: 56, borderRadius: 999, objectFit: "cover", flexShrink: 0 }}
+                />
+                <div>
+                  <p style={{ margin: 0, fontWeight: 700, fontSize: 15, color: "white" }}>Felipe Galli</p>
+                  <p style={{ margin: "3px 0 0", fontSize: 13, color: "rgba(255,255,255,.5)", fontFamily: "var(--font-mono)", letterSpacing: ".04em" }}>
+                    Founder · Revtrue
+                  </p>
+                </div>
+              </div>
+
               <p
                 style={{
                   fontFamily: "var(--font-mono)",
