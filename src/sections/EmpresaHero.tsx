@@ -1,6 +1,5 @@
-/* EmpresaHero — Hook
- * Ângulo: empreendedor que vende (ou tenta), gera lead, tem visita, mas não converte
- * Emocional: aflição de ver outros conseguindo enquanto ele não */
+/* EmpresaHero — Hook amplo
+ * Não ataca um ângulo único — fala com qualquer empreendedor que sente que deveria crescer mais */
 import { useState } from "react";
 import { Icon } from "../ui";
 import { BookingModal } from "../components/BookingModal";
@@ -78,10 +77,9 @@ export function EmpresaHero() {
               maxWidth: 1100,
             }}
           >
-            Você gera lead,<br />
-            tem visita,<br />
-            faz proposta.<br />
-            <span style={{ color: orange }}>E não fecha.</span>
+            Seu negócio deveria<br />
+            estar crescendo<br />
+            <span style={{ color: orange }}>mais do que está.</span>
           </h1>
 
           <p
@@ -93,7 +91,7 @@ export function EmpresaHero() {
               maxWidth: 660,
             }}
           >
-            Não é falta de esforço. É falta de estrutura. Oferta que não convence, jornada que vaza, posicionamento que não separa você da concorrência. Em 45 minutos, você entende exatamente onde o dinheiro está escapando — e o que montar pra isso parar.
+            Você trabalha, investe, tenta. Mas o resultado não acompanha o esforço. Em algum ponto da sua operação comercial tem um furo — e enquanto você não souber onde, vai continuar remando com balde cheio.
           </p>
 
           <div style={{ marginTop: 44, display: "flex", flexDirection: "column", gap: 14, alignItems: "flex-start" }}>
@@ -115,7 +113,7 @@ export function EmpresaHero() {
                 gap: 12,
               }}
             >
-              Quero entender por que não estou fechando <Icon name="arrow-right" size="md" />
+              Quero entender onde minha venda trava <Icon name="arrow-right" size="md" />
             </button>
             <p
               style={{
