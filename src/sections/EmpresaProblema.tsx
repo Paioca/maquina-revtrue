@@ -1,17 +1,41 @@
-/* EmpresaProblema — Seção 3 · O Vilão
- * StoryBrand: vilão externo (ausência de sistema) + problema interno (frustração) + filosófico
- * $100M Offers: amplia o problema antes de oferecer a solução */
+/* EmpresaProblema — O Vilão Real
+ * Ângulo: os furos reais que impedem a conversão
+ * Oferta mal construída, jornada que vaza, mix sem definição, comunicação que não convence */
 
 const navy = "#14181F";
 const orange = "#D45A2A";
 
-const sinais = [
-  { n: "01", texto: "Meta que não fecha, mesmo com time crescendo." },
-  { n: "02", texto: "Vendedor novo repete o resultado do anterior." },
-  { n: "03", texto: "CRM comprado, mas a operação ainda roda no feeling." },
-  { n: "04", texto: "Você sabe quanto vendeu, mas não sabe onde perdeu." },
-  { n: "05", texto: "Reunião de pipeline vira conversa de estimativa." },
-  { n: "06", texto: "Resultado depende de quem está na cadeira naquele mês." },
+const furos = [
+  {
+    n: "01",
+    titulo: "Oferta que não justifica o sim",
+    desc: "O produto é bom. Mas quando você apresenta, o cliente não entende por que é a escolha certa pra ele agora. A oferta precisa ser construída — não só descrita.",
+  },
+  {
+    n: "02",
+    titulo: "Jornada com buracos",
+    desc: "Tem interesse no começo, tem proposta no final. O meio está vazio. Sem critérios de avanço, cada conversa recomeça do zero — e o cliente esfria antes de fechar.",
+  },
+  {
+    n: "03",
+    titulo: "Posicionamento que não separa",
+    desc: "Você compete por preço porque não ficou claro por que você é a escolha certa. Posicionamento fraco transforma valor real em commodity.",
+  },
+  {
+    n: "04",
+    titulo: "Mix de produto sem clareza",
+    desc: "Você vende o que o cliente pede, não o que a operação deveria oferecer. Sem definição de mix, cada venda é uma negociação do zero.",
+  },
+  {
+    n: "05",
+    titulo: "Comunicação que não converte",
+    desc: "O que você diz e como você diz não está alinhado com quem está na frente de você. A linguagem certa vende. A linguagem errada gera dúvida — e dúvida não fecha.",
+  },
+  {
+    n: "06",
+    titulo: "Ferramental que não sustenta",
+    desc: "CRM, proposta, follow-up — cada peça foi montada de forma independente. O resultado é uma operação que depende da memória de quem está vendendo.",
+  },
 ];
 
 export function EmpresaProblema() {
@@ -26,112 +50,112 @@ export function EmpresaProblema() {
       }}
     >
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
-        <div className="problema-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 80px", alignItems: "start" }}>
 
-          {/* Coluna esquerda */}
-          <div>
-            <h2
-              className="font-display"
-              style={{
-                fontSize: "clamp(40px, 6vw, 92px)",
-                lineHeight: 0.95,
-                letterSpacing: "-0.04em",
-                margin: 0,
-                fontWeight: 700,
-                color: "white",
-              }}
-            >
-              O problema<br />
-              não é quem<br />
-              <span style={{ color: orange }}>vende.<br />É como.</span>
-            </h2>
+        {/* Headline */}
+        <div style={{ maxWidth: 860, marginBottom: 64 }}>
+          <h2
+            className="font-display"
+            style={{
+              fontSize: "clamp(38px, 5.5vw, 86px)",
+              lineHeight: 0.97,
+              letterSpacing: "-0.04em",
+              margin: 0,
+              fontWeight: 700,
+              color: "white",
+            }}
+          >
+            O problema não é<br />
+            o quanto você vende.<br />
+            <span style={{ color: orange }}>É o que impede<br />de vender mais.</span>
+          </h2>
+          <p style={{ fontSize: 19, lineHeight: 1.6, color: "rgba(255,255,255,.7)", margin: "32px 0 0", maxWidth: 680 }}>
+            Você está pesquisando, tentando, aplicando. Mas ninguém ainda sentou com você pra apontar onde a sua operação comercial tem furo — e o que tapar primeiro.
+          </p>
+        </div>
 
-            <p style={{ fontSize: 19, lineHeight: 1.65, color: "rgba(255,255,255,.75)", margin: "44px 0 0", maxWidth: 480 }}>
-              Quando um vendedor não performa, pode ser ele. Quando o time todo não performa, a causa está acima das pessoas — está em como a operação foi montada.
-            </p>
-
-            <p style={{ fontSize: 19, lineHeight: 1.65, color: "rgba(255,255,255,.75)", margin: "20px 0 0", maxWidth: 480 }}>
-              A solução não é trocar quem vende. É projetar como a venda deve funcionar — com etapas definidas, critérios claros e números que guiam decisão.
-            </p>
-          </div>
-
-          {/* Coluna direita: sinais */}
-          <div>
-            <p
-              style={{
-                fontFamily: "var(--font-mono)",
-                fontSize: 12,
-                color: "rgba(255,255,255,.4)",
-                letterSpacing: ".1em",
-                textTransform: "uppercase",
-                margin: "0 0 32px",
-              }}
-            >
-              Reconhece algum desses?
-            </p>
-            <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-              {sinais.map((s, i) => (
-                <li
-                  key={s.n}
-                  style={{
-                    display: "flex",
-                    gap: 20,
-                    padding: "20px 0",
-                    borderBottom: i < sinais.length - 1 ? "1px solid rgba(255,255,255,.07)" : "none",
-                    alignItems: "flex-start",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: 11,
-                      color: orange,
-                      fontWeight: 700,
-                      letterSpacing: ".06em",
-                      paddingTop: 3,
-                      flexShrink: 0,
-                    }}
-                  >
-                    {s.n}
-                  </span>
-                  <span style={{ fontSize: 17, lineHeight: 1.55, color: "rgba(255,255,255,.82)", fontWeight: 500 }}>
-                    {s.texto}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
+        {/* Grid de furos */}
+        <div
+          className="furos-grid"
+          style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}
+        >
+          {furos.map((f) => (
             <div
+              key={f.n}
               style={{
-                marginTop: 32,
-                padding: "22px 26px",
-                background: `${orange}12`,
-                borderRadius: 12,
-                border: `1px solid ${orange}38`,
+                padding: "28px 26px",
+                background: "rgba(255,255,255,.03)",
+                borderRadius: 16,
+                border: "1px solid rgba(255,255,255,.07)",
               }}
             >
-              <p
+              <span
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: 11,
+                  color: orange,
+                  fontWeight: 700,
+                  letterSpacing: ".08em",
+                  display: "block",
+                  marginBottom: 16,
+                }}
+              >
+                {f.n}
+              </span>
+              <h3
                 className="font-display"
                 style={{
                   fontSize: "clamp(16px, 1.6vw, 20px)",
                   fontWeight: 700,
                   letterSpacing: "-0.01em",
-                  color: orange,
-                  margin: 0,
-                  lineHeight: 1.3,
+                  margin: "0 0 12px",
+                  color: "white",
+                  lineHeight: 1.25,
                 }}
               >
-                Se dois ou mais aparecem juntos, você não tem problema de execução. Você tem problema de estrutura.
+                {f.titulo}
+              </h3>
+              <p style={{ fontSize: 15, lineHeight: 1.65, color: "rgba(255,255,255,.65)", margin: 0 }}>
+                {f.desc}
               </p>
             </div>
-          </div>
+          ))}
+        </div>
+
+        {/* Frase de identificação emocional */}
+        <div
+          style={{
+            marginTop: 48,
+            maxWidth: 900,
+            padding: "32px 36px",
+            background: `${orange}10`,
+            borderRadius: 16,
+            border: `1px solid ${orange}30`,
+          }}
+        >
+          <p
+            className="font-display"
+            style={{
+              fontSize: "clamp(20px, 2.4vw, 30px)",
+              lineHeight: 1.3,
+              letterSpacing: "-0.02em",
+              fontWeight: 700,
+              color: "white",
+              margin: 0,
+            }}
+          >
+            Você não está ficando pra trás porque trabalha menos ou tem produto pior.{" "}
+            <span style={{ color: orange }}>Está porque ninguém ainda montou a estrutura que transforma interesse em receita.</span>
+          </p>
         </div>
       </div>
 
       <style>{`
         @media (max-width: 900px) {
-          .problema-grid { grid-template-columns: 1fr !important; gap: 56px !important; }
+          .furos-grid { grid-template-columns: 1fr !important; }
           #problema { padding: 80px 0 !important; }
+        }
+        @media (min-width: 901px) and (max-width: 1100px) {
+          .furos-grid { grid-template-columns: repeat(2, 1fr) !important; }
         }
       `}</style>
     </section>

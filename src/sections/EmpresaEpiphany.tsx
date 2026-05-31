@@ -1,6 +1,6 @@
-/* EmpresaEpiphany — Seção 2 · Epiphany Bridge
- * DotCom Secrets: a história que instala a crença certa
- * A virada: o sistema faz o vendedor, não o contrário */
+/* EmpresaEpiphany — Epiphany Bridge
+ * Ângulo: o empreendedor que faz tudo certo e mesmo assim não converte
+ * Quebra a crença: "preciso de mais lead" → "preciso de estrutura pra fechar" */
 
 const navy = "#14181F";
 const navySoft = "#1E232C";
@@ -20,7 +20,7 @@ export function EmpresaEpiphany() {
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}>
         <div className="epiphany-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 100px", alignItems: "start" }}>
 
-          {/* Coluna esquerda: a história */}
+          {/* Coluna esquerda */}
           <div>
             <p
               style={{
@@ -33,17 +33,16 @@ export function EmpresaEpiphany() {
                 margin: "0 0 32px",
               }}
             >
-              O que eu aprendi na prática
+              O padrão que eu vejo se repetir
             </p>
 
             <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: 0 }}>
-              Passei anos operando dentro das estruturas comerciais da Oracle e da RD Station. Empresas que constroem processos de venda com a mesma engenharia que usam pra construir produto.
+              A maioria dos empreendedores que chega até mim não tem problema de geração de demanda. Tem reunião. Tem lead. Às vezes tem uma fila de interessados.
             </p>
             <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: "24px 0 0" }}>
-              Aprendi uma coisa que nenhum curso de vendas ensina:
+              O problema está no que acontece depois que o interesse aparece.
             </p>
 
-            {/* Crença instalada */}
             <div
               style={{
                 margin: "36px 0",
@@ -56,71 +55,75 @@ export function EmpresaEpiphany() {
               <p
                 className="font-display"
                 style={{
-                  fontSize: "clamp(22px, 2.6vw, 34px)",
-                  lineHeight: 1.2,
-                  letterSpacing: "-0.025em",
+                  fontSize: "clamp(20px, 2.4vw, 30px)",
+                  lineHeight: 1.25,
+                  letterSpacing: "-0.02em",
                   fontWeight: 700,
                   color: "white",
                   margin: 0,
                 }}
               >
-                Um vendedor bom colocado em uma empresa sem processo vira um vendedor mediano em 90 dias.
+                O lead chega. A conversa acontece. A proposta sai. E aí — silêncio. Ou um "vou pensar" que nunca volta.
               </p>
             </div>
 
             <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: 0 }}>
-              O processo não é o suporte da venda. O processo <em style={{ color: "white", fontStyle: "normal", fontWeight: 600 }}>é</em> a venda. O vendedor executa o que foi projetado — e quando não existe projeto, cada um improvisa do jeito que sabe.
+              Não é coincidência. Não é "o mercado difícil". É que a venda não foi estruturada pra fechar. A oferta não está clara. A jornada tem buraco. O posicionamento não justifica o preço.
             </p>
             <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: "24px 0 0" }}>
-              Quando saí das grandes empresas e comecei a trabalhar com negócios menores, vi o mesmo padrão do outro lado: donos com operações boas, times com potencial real — e uma venda que não entregava porque ninguém tinha projetado como ela deveria funcionar.
+              E enquanto isso, você assiste outros — com produto pior, com menos acesso, com menos tempo de mercado — fechando mais do que você.
             </p>
           </div>
 
-          {/* Coluna direita: a virada de crença */}
+          {/* Coluna direita */}
           <div style={{ paddingTop: 8 }}>
+
+            {/* O loop que não para */}
             <div
               style={{
-                padding: "36px 32px",
+                padding: "32px 28px",
                 background: "rgba(255,255,255,.04)",
-                borderRadius: 20,
+                borderRadius: 16,
                 border: "1px solid rgba(255,255,255,.08)",
-                marginBottom: 24,
+                marginBottom: 20,
               }}
             >
               <p
                 style={{
                   fontFamily: "var(--font-mono)",
                   fontSize: 11,
-                  color: "rgba(255,255,255,.4)",
+                  color: "rgba(255,255,255,.35)",
                   letterSpacing: ".1em",
                   textTransform: "uppercase",
-                  margin: "0 0 20px",
+                  margin: "0 0 18px",
                 }}
               >
-                A crença errada
+                O loop que não para
               </p>
-              <p
-                className="font-display"
-                style={{
-                  fontSize: "clamp(18px, 1.8vw, 22px)",
-                  fontWeight: 700,
-                  letterSpacing: "-0.015em",
-                  color: "rgba(255,255,255,.55)",
-                  margin: 0,
-                  lineHeight: 1.35,
-                  textDecoration: "line-through",
-                  textDecorationColor: "rgba(255,255,255,.25)",
-                }}
-              >
-                "Se eu contratar o vendedor certo, a meta fecha."
-              </p>
+              <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 12 }}>
+                {[
+                  "Gera mais conteúdo pra gerar mais lead",
+                  "Faz mais reunião",
+                  "Manda mais proposta",
+                  "Fica no aguardo",
+                  "Volta pro início",
+                ].map((item, i, arr) => (
+                  <li key={i} style={{ display: "flex", gap: 12, alignItems: "center" }}>
+                    <span style={{ color: i === arr.length - 1 ? orange : "rgba(255,255,255,.3)", fontSize: 14, flexShrink: 0 }}>
+                      {i === arr.length - 1 ? "↩" : "→"}
+                    </span>
+                    <span style={{ fontSize: 16, color: i === arr.length - 1 ? orange : "rgba(255,255,255,.65)" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
+            {/* A crença que precisa mudar */}
             <div
               style={{
-                padding: "36px 32px",
+                padding: "32px 28px",
                 background: `${orange}14`,
-                borderRadius: 20,
+                borderRadius: 16,
                 border: `1px solid ${orange}45`,
               }}
             >
@@ -131,37 +134,37 @@ export function EmpresaEpiphany() {
                   color: orange,
                   letterSpacing: ".1em",
                   textTransform: "uppercase",
-                  margin: "0 0 20px",
+                  margin: "0 0 18px",
                 }}
               >
-                O que é verdade
+                O que muda quando você tem estrutura
               </p>
               <p
                 className="font-display"
                 style={{
-                  fontSize: "clamp(18px, 1.8vw, 22px)",
+                  fontSize: "clamp(17px, 1.7vw, 21px)",
                   fontWeight: 700,
-                  letterSpacing: "-0.015em",
+                  letterSpacing: "-0.01em",
                   color: "white",
                   margin: 0,
-                  lineHeight: 1.35,
+                  lineHeight: 1.4,
                 }}
               >
-                "O vendedor certo só performa dentro de um processo certo. Sem o processo, você repete o mesmo ciclo com a próxima pessoa."
+                O mesmo lead que hoje responde "vou pensar" começa a fechar. Não porque você ficou melhor em convencer — mas porque a jornada foi projetada pra isso.
               </p>
             </div>
 
             <div
               style={{
-                marginTop: 32,
-                padding: "24px 28px",
+                marginTop: 20,
+                padding: "20px 24px",
                 background: "rgba(255,255,255,.03)",
-                borderRadius: 14,
+                borderRadius: 12,
                 border: "1px solid rgba(255,255,255,.06)",
               }}
             >
-              <p style={{ fontSize: 16, lineHeight: 1.6, color: "rgba(255,255,255,.7)", margin: 0 }}>
-                Não é culpa sua não saber disso. Ninguém te ensinou a projetar uma operação comercial. Você aprendeu a vender na raça — e isso funcionou até um ponto. O próximo degrau exige estrutura.
+              <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(255,255,255,.6)", margin: 0 }}>
+                Não é sobre trabalhar mais. É sobre montar o caminho certo pra que o cliente chegue na decisão com clareza — e diga sim.
               </p>
             </div>
           </div>

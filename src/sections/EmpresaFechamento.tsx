@@ -1,6 +1,6 @@
-/* EmpresaFechamento — Seção 7 · Stakes + CTA Final
- * StoryBrand: o que o herói perde se não agir + o que ganha se agir
- * $100M Offers: elimina última objeção + torna óbvio dizer sim */
+/* EmpresaFechamento — Stakes + CTA Final
+ * Ângulo: a sensação de que os outros estão conseguindo menos você
+ * StoryBrand: o que muda quando você tem estrutura */
 import { useState } from "react";
 import { Icon } from "../ui";
 import { BookingModal } from "../components/BookingModal";
@@ -17,7 +17,7 @@ export function EmpresaFechamento() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div className="fechamento-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 80px", alignItems: "center" }}>
 
-            {/* Coluna esquerda: headline de stakes */}
+            {/* Coluna esquerda */}
             <div>
               <h2
                 className="font-display"
@@ -30,13 +30,13 @@ export function EmpresaFechamento() {
                   color: "white",
                 }}
               >
-                Daqui a seis meses, a sua venda vai estar diferente.
+                Você não está ficando pra trás por falta de esforço.
               </h2>
               <p
                 className="font-display"
                 style={{
-                  fontSize: "clamp(22px, 2.8vw, 38px)",
-                  lineHeight: 1.1,
+                  fontSize: "clamp(22px, 2.8vw, 36px)",
+                  lineHeight: 1.15,
                   letterSpacing: "-0.025em",
                   margin: "24px 0 0",
                   fontWeight: 700,
@@ -44,83 +44,41 @@ export function EmpresaFechamento() {
                   fontStyle: "italic",
                 }}
               >
-                A pergunta é: diferente como?
+                Está faltando alguém sentar com você e montar o que está faltando.
               </p>
             </div>
 
-            {/* Coluna direita: dois caminhos + CTA */}
+            {/* Coluna direita */}
             <div>
-              {/* Caminho sem ação */}
-              <div
-                style={{
-                  padding: "24px 28px",
-                  background: "rgba(20,24,31,.12)",
-                  borderRadius: 14,
-                  marginBottom: 16,
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: 11,
-                    color: "rgba(20,24,31,.5)",
-                    letterSpacing: ".1em",
-                    textTransform: "uppercase",
-                    margin: "0 0 12px",
-                  }}
-                >
-                  Sem mudar a estrutura
-                </p>
-                <p style={{ fontSize: 16, lineHeight: 1.6, color: "rgba(20,24,31,.75)", margin: 0 }}>
-                  Novo ciclo de contratação. Mesma frustração. Meta que vira meta do próximo mês. Time que não sabe o que fazer quando o número não aparece.
-                </p>
-              </div>
+              <p style={{ fontSize: 18, lineHeight: 1.65, color: "rgba(20,24,31,.82)", margin: "0 0 20px" }}>
+                Você está pesquisando. Consumindo conteúdo. Tentando aplicar. E mesmo assim a conversão não sobe, o faturamento não cresce, e a sensação de que os outros estão conseguindo não passa.
+              </p>
+              <p style={{ fontSize: 18, lineHeight: 1.65, color: "rgba(20,24,31,.82)", margin: "0 0 32px" }}>
+                O que falta não é mais informação. É um diagnóstico honesto de onde a sua operação comercial tem furo — e um caminho claro do que montar primeiro.
+              </p>
 
-              {/* Caminho com ação */}
               <div
                 style={{
-                  padding: "24px 28px",
-                  background: "rgba(20,24,31,.18)",
+                  padding: "22px 26px",
+                  background: "rgba(20,24,31,.1)",
                   borderRadius: 14,
-                  marginBottom: 36,
-                  border: "1px solid rgba(20,24,31,.25)",
+                  marginBottom: 32,
                 }}
               >
                 <p
+                  className="font-display"
                   style={{
-                    fontFamily: "var(--font-mono)",
-                    fontSize: 11,
-                    color: navy,
+                    fontSize: "clamp(17px, 1.8vw, 22px)",
                     fontWeight: 700,
-                    letterSpacing: ".1em",
-                    textTransform: "uppercase",
-                    margin: "0 0 12px",
+                    letterSpacing: "-0.01em",
+                    color: navy,
+                    margin: 0,
+                    lineHeight: 1.3,
                   }}
                 >
-                  Com o processo instalado
-                </p>
-                <p style={{ fontSize: 16, lineHeight: 1.6, color: navy, margin: 0, fontWeight: 500 }}>
-                  Venda previsível. Time que executa sem depender de improviso. Você sabe onde o negócio está em cada etapa — e o que fazer quando trava.
+                  Em 45 minutos você entende por que não está fechando — e o que montar pra isso mudar. Se não sair da conversa com isso, você não perdeu nada.
                 </p>
               </div>
-
-              <p style={{ fontSize: 17, lineHeight: 1.6, color: "rgba(20,24,31,.82)", margin: "0 0 32px" }}>
-                O próximo passo custa 5 minutos pra preencher e 45 minutos de conversa. Em troca, você sai sabendo exatamente onde sua operação trava e o que mudar primeiro.
-              </p>
-
-              <p
-                className="font-display"
-                style={{
-                  fontSize: "clamp(18px, 2vw, 24px)",
-                  fontWeight: 700,
-                  letterSpacing: "-0.01em",
-                  color: navy,
-                  margin: "0 0 32px",
-                  lineHeight: 1.3,
-                }}
-              >
-                Se não sair da conversa com isso, você não perdeu nada.
-              </p>
 
               <button
                 type="button"

@@ -1,7 +1,6 @@
-/* EmpresaHero — Seção 1 · Hook
- * DotCom Secrets: Bait que atrai o cliente ideal
- * StoryBrand: vilão externo + CTA direto
- * $100M Offers: dream outcome na headline */
+/* EmpresaHero — Hook
+ * Ângulo: empreendedor que vende (ou tenta), gera lead, tem visita, mas não converte
+ * Emocional: aflição de ver outros conseguindo enquanto ele não */
 import { useState } from "react";
 import { Icon } from "../ui";
 import { BookingModal } from "../components/BookingModal";
@@ -19,7 +18,6 @@ export function EmpresaHero() {
         id="hero"
         style={{ position: "relative", padding: "100px 40px 120px", overflow: "hidden", background: navy, color: "white" }}
       >
-        {/* Grid de fundo */}
         <div
           aria-hidden="true"
           style={{
@@ -80,22 +78,22 @@ export function EmpresaHero() {
               maxWidth: 1100,
             }}
           >
-            Sua venda não<br />
-            trava por falta<br />
-            de vendedor.<br />
-            <span style={{ color: orange }}>Trava por falta<br />de processo.</span>
+            Você gera lead,<br />
+            tem visita,<br />
+            faz proposta.<br />
+            <span style={{ color: orange }}>E não fecha.</span>
           </h1>
 
           <p
             style={{
               fontSize: 20,
-              lineHeight: 1.6,
+              lineHeight: 1.65,
               color: "rgba(255,255,255,.72)",
               margin: "48px 0 0",
-              maxWidth: 640,
+              maxWidth: 660,
             }}
           >
-            Em 45 minutos, você sai sabendo exatamente onde sua operação comercial trava — e o que mudar primeiro para ter uma venda que funciona independente de quem está na cadeira.
+            Não é falta de esforço. É falta de estrutura. Oferta que não convence, jornada que vaza, posicionamento que não separa você da concorrência. Em 45 minutos, você entende exatamente onde o dinheiro está escapando — e o que montar pra isso parar.
           </p>
 
           <div style={{ marginTop: 44, display: "flex", flexDirection: "column", gap: 14, alignItems: "flex-start" }}>
@@ -117,7 +115,7 @@ export function EmpresaHero() {
                 gap: 12,
               }}
             >
-              Quero entender onde minha venda trava <Icon name="arrow-right" size="md" />
+              Quero entender por que não estou fechando <Icon name="arrow-right" size="md" />
             </button>
             <p
               style={{
