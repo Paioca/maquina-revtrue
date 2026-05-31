@@ -67,7 +67,7 @@ export function EmpresaEpiphany() {
             </div>
 
             <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: 0 }}>
-              Não é falta de esforço. Não é falta de talento. É que a operação comercial — oferta, posicionamento, jornada, processo, comunicação — nunca foi projetada. Cresceu no improviso, no feeling, na tentativa e erro.
+              A operação comercial — oferta, posicionamento, jornada, processo, comunicação — cresceu no improviso, no feeling, na tentativa e erro. Ninguém projetou. Ninguém montou.
             </p>
             <p style={{ fontSize: 19, lineHeight: 1.7, color: "rgba(255,255,255,.85)", margin: "24px 0 0" }}>
               E improviso tem teto. Estrutura, não.
@@ -158,7 +158,7 @@ export function EmpresaEpiphany() {
               }}
             >
               <p style={{ fontSize: 15, lineHeight: 1.6, color: "rgba(255,255,255,.6)", margin: 0 }}>
-                Não é sobre trabalhar mais. É sobre montar o que está faltando — uma vez — e ter a operação funcionando a partir daí.
+                Montar o que está faltando, uma vez, muda o que o esforço sozinho nunca vai mudar.
               </p>
             </div>
           </div>

@@ -30,7 +30,7 @@ export function EmpresaFechamento() {
                   color: "white",
                 }}
               >
-                Você não está ficando pra trás por falta de esforço.
+                Você pesquisa, testa, aplica. O resultado não acompanha.
               </h2>
               <p
                 className="font-display"
@@ -44,7 +44,7 @@ export function EmpresaFechamento() {
                   fontStyle: "italic",
                 }}
               >
-                Está faltando alguém sentar com você e montar o que está faltando.
+                A estrutura comercial que falta, alguém precisa montar com você.
               </p>
             </div>
 
@@ -54,7 +54,7 @@ export function EmpresaFechamento() {
                 Você está pesquisando. Consumindo conteúdo. Tentando aplicar. E mesmo assim a conversão não sobe, o faturamento não cresce, e a sensação de que os outros estão conseguindo não passa.
               </p>
               <p style={{ fontSize: 18, lineHeight: 1.65, color: "rgba(20,24,31,.82)", margin: "0 0 32px" }}>
-                O que falta não é mais informação. É um diagnóstico honesto de onde a sua operação comercial tem furo — e um caminho claro do que montar primeiro.
+                Informação você já tem. O que falta é alguém sentar com você, mapear onde a operação comercial trava, e dizer o que montar primeiro.
               </p>
 
               <div
