@@ -1,6 +1,6 @@
 /* Global <head> defaults. Per-page extras vão em pages/<rota>/+Head.tsx. */
 
-const SITE_URL = "https://revtrue.com.br";
+const SITE_URL = "https://maquina.revtrue.com.br";
 
 const organizationLd = {
   "@type": "Organization",

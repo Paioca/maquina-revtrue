@@ -8,7 +8,7 @@ interface SeoOptions {
   jsonLd?: object | object[];
 }
 
-const SITE_URL = "https://revtrue.com.br";
+const SITE_URL = "https://maquina.revtrue.com.br";
 
 function setOrCreate<T extends HTMLElement>(
   selector: string,
