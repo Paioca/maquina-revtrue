@@ -124,15 +124,15 @@ function RateRow({
           disabled={disabled}
           onChange={(e) => onChange(Math.max(1, Math.min(100, Number(e.target.value) || 0)))}
           style={{
-            width: 64,
-            height: 40,
+            width: 68,
+            height: 44,
             padding: "0 8px",
             textAlign: "right",
             borderRadius: 8,
             background: navy,
             border: "1px solid rgba(255,255,255,.14)",
             color: "white",
-            fontSize: 15,
+            fontSize: 16,
             fontWeight: 700,
             fontFamily: "inherit",
             outline: "none",
@@ -346,30 +346,43 @@ export function Calculadora() {
                       O funil pra bater {brl(meta)}/mês
                     </p>
 
-                    <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
                       {stages.map((s, i) => {
-                        const widthPct = Math.max(22, (s.value / max) * 100);
+                        const widthPct = Math.max(8, (s.value / max) * 100);
                         const last = i === stages.length - 1;
                         return (
                           <div key={s.label}>
+                            {/* Label + número — sempre largura cheia, legível em qualquer tela */}
                             <div
                               style={{
-                                width: `${widthPct}%`,
-                                background: last ? orange : `rgba(212,90,42,${0.28 + i * 0.12})`,
-                                borderRadius: 10,
-                                padding: "14px 18px",
                                 display: "flex",
-                                alignItems: "center",
+                                alignItems: "baseline",
                                 justifyContent: "space-between",
                                 gap: 12,
-                                transition: "width .25s ease",
-                                minWidth: 0,
+                                marginBottom: 7,
                               }}
                             >
-                              <span style={{ fontSize: 14, fontWeight: 600, color: "white", whiteSpace: "nowrap" }}>{s.label}</span>
-                              <span className="font-display" style={{ fontSize: 22, fontWeight: 700, color: "white", letterSpacing: "-0.02em" }}>
+                              <span style={{ fontSize: 14, fontWeight: 600, color: last ? orange : "rgba(255,255,255,.85)" }}>
+                                {s.label}
+                              </span>
+                              <span
+                                className="font-display"
+                                style={{ fontSize: 22, fontWeight: 700, color: "white", letterSpacing: "-0.02em" }}
+                              >
                                 {s.value.toLocaleString("pt-BR")}
                               </span>
+                            </div>
+                            {/* Trilho + preenchimento proporcional */}
+                            <div style={{ height: 12, borderRadius: 99, background: "rgba(255,255,255,.06)", overflow: "hidden" }}>
+                              <div
+                                style={{
+                                  width: `${widthPct}%`,
+                                  height: "100%",
+                                  borderRadius: 99,
+                                  background: last ? orange : `rgba(212,90,42,${0.4 + i * 0.12})`,
+                                  transition: "width .3s ease",
+                                }}
+                              />
                             </div>
                           </div>
                         );
