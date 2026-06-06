@@ -3,6 +3,7 @@ import { EmpresaEpiphany } from "../../src/sections/EmpresaEpiphany";
 import { EmpresaProblema } from "../../src/sections/EmpresaProblema";
 import { EmpresaFelipe } from "../../src/sections/EmpresaFelipe";
 import { EmpresaOQueFazemos } from "../../src/sections/EmpresaOQueFazemos";
+import { EmpresaCalcLink } from "../../src/sections/EmpresaCalcLink";
 import { EmpresaOferta } from "../../src/sections/EmpresaOferta";
 import { EmpresaFechamento } from "../../src/sections/EmpresaFechamento";
 import { StickyMobileCTA } from "../../src/components/StickyMobileCTA";
@@ -20,6 +21,8 @@ export default function Page() {
       <EmpresaFelipe />
       {/* 5. O Método — Value Ladder em 3 fases */}
       <EmpresaOQueFazemos />
+      {/* 5.5 Ferramenta — link pra Calculadora de Meta */}
+      <EmpresaCalcLink />
       {/* 6. A Oferta — stack de valor + diferenciação */}
       <EmpresaOferta />
       {/* 7. Stakes + CTA Final */}
