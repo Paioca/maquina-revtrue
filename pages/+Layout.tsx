@@ -8,6 +8,7 @@ import "@fontsource/inter/latin-700.css";
 import "@fontsource/jetbrains-mono/latin-500.css";
 import "@fontsource/jetbrains-mono/latin-700.css";
 
+import { Analytics } from "@vercel/analytics/react";
 import { StickyHeader } from "../src/components/StickyHeader";
 import { Footer } from "../src/components/Footer";
 
@@ -19,6 +20,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <StickyHeader />
       {children}
       <Footer />
+      {/* Vercel Web Analytics — visitas por página (LP, /calculadora, etc.) */}
+      <Analytics />
     </div>
   );
 }

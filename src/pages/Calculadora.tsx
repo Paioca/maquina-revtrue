@@ -2,7 +2,8 @@
  * Parte da meta de faturamento mensal e calcula quantas reuniões, propostas,
  * negociações e fechamentos são necessários, dado o ticket médio e as taxas
  * de conversão (ou benchmark B2B se o usuário não souber as dele). */
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { track } from "@vercel/analytics";
 import { Icon } from "../ui";
 import { BookingModal } from "../components/BookingModal";
 
@@ -172,6 +173,15 @@ export function Calculadora() {
 
     return { vendas, fechamento, negociacao, propostas, reunioes, valorFinal };
   }, [meta, ticket, eff]);
+
+  // Evento "completou o teste" — dispara uma vez quando o funil aparece pela 1ª vez
+  const resultadoTracked = useRef(false);
+  useEffect(() => {
+    if (r && !resultadoTracked.current) {
+      resultadoTracked.current = true;
+      track("calculadora_resultado", { benchmark: useBenchmark });
+    }
+  }, [r, useBenchmark]);
 
   const stages = r
     ? [
@@ -438,7 +448,10 @@ export function Calculadora() {
                     </p>
                     <button
                       type="button"
-                      onClick={() => setOpen(true)}
+                      onClick={() => {
+                        track("calculadora_cta_felipe");
+                        setOpen(true);
+                      }}
                       className="lp-cta-btn"
                       style={{
                         background: orange,
